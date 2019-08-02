@@ -1,4 +1,5 @@
 <?php
+
 namespace SendCloud\SendCloud\Model;
 
 use SendCloud\SendCloud\Api\SettingsInterface;
@@ -18,7 +19,7 @@ class Settings implements SettingsInterface
      * @param ResourceInterface $moduleResource
      * @param ProductMetadataInterface $productMetadata
      */
-    public function __construct( ResourceInterface $moduleResource, ProductMetadataInterface $productMetadata )
+    public function __construct(ResourceInterface $moduleResource, ProductMetadataInterface $productMetadata)
     {
         $this->moduleResource = $moduleResource;
         $this->productMetaData = $productMetadata;

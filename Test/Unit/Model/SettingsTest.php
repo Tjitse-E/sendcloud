@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rick
- * Date: 29-3-18
- * Time: 13:55
- */
 
 namespace SendCloud\SendCloud\Test\Unit\Model;
 
@@ -14,7 +8,7 @@ class SettingsTest extends Generic
 {
     private $settings;
 
-    const MODULE_INFORMATION = [["Version" => null]];
+    public static $MODULE_INFORMATION = [["Version" => null]];
     const SCRIPT_URL = "https://sendcloud.nl/scripturltest";
 
     protected function setUp()
@@ -26,6 +20,6 @@ class SettingsTest extends Generic
 
     public function testGetModuleInformation()
     {
-        $this->assertEquals(self::MODULE_INFORMATION, $this->settings->getModuleInformation());
+        $this->assertEquals(self::$MODULE_INFORMATION, $this->settings->getModuleInformation());
     }
 }

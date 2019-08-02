@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wessel
- * Date: 27-02-18
- * Time: 21:46
- */
 
 namespace SendCloud\SendCloud\Model;
 
@@ -26,7 +20,7 @@ class ServicePoint implements ServicePointInterface
     /** @var TypeListInterface  */
     private $cache;
 
-    public function __construct( WriterInterface $writer, SendCloudLogger $logger, TypeListInterface $cache )
+    public function __construct(WriterInterface $writer, SendCloudLogger $logger, TypeListInterface $cache)
     {
         $this->writer = $writer;
         $this->logger = $logger;

@@ -1,4 +1,5 @@
 <?php
+
 namespace SendCloud\SendCloud\Controller\Adminhtml\AutoConnect;
 
 use Magento\Backend\App\Action;
@@ -36,7 +37,7 @@ class Connector extends Action
      * @param Random $mathRandom
      * @param SendCloudLogger $logger
      */
-    public function __construct( Context $context, PageFactory $resultPageFactory, AutoGenerateApiUser $autoGenerateApiUser, Random $mathRandom, SendCloudLogger $logger )
+    public function __construct(Context $context, PageFactory $resultPageFactory, AutoGenerateApiUser $autoGenerateApiUser, Random $mathRandom, SendCloudLogger $logger)
     {
         $this->resultPageFactory = $resultPageFactory;
         $this->autoGenerateApiUser = $autoGenerateApiUser;

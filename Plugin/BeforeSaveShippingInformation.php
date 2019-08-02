@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rick
- * Date: 12-4-18
- * Time: 9:30
- */
 
 namespace SendCloud\SendCloud\Plugin;
 
@@ -16,12 +10,33 @@ use Magento\Quote\Model\QuoteRepository;
 use SendCloud\SendCloud\Helper\Checkout;
 use SendCloud\SendCloud\Logger\SendCloudLogger;
 
+/**
+ * Class BeforeSaveShippingInformation
+ * @package SendCloud\SendCloud\Plugin
+ */
 class BeforeSaveShippingInformation
 {
+    /**
+     * @var RequestInterface
+     */
     private $request;
+
+    /**
+     * @var QuoteRepository
+     */
     private $quoteRepository;
+
+    /**
+     * @var Checkout
+     */
     private $helper;
 
+    /**
+     * BeforeSaveShippingInformation constructor.
+     * @param RequestInterface $request
+     * @param QuoteRepository $quoteRepository
+     * @param Checkout $helper
+     */
     public function __construct(
         RequestInterface $request,
         QuoteRepository $quoteRepository,
